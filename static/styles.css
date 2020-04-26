@@ -1,0 +1,78 @@
+html{
+  height: 100%;
+}
+
+body{
+    background: rgba(235,233,249,1);
+background: -moz-linear-gradient(-45deg, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 45%, rgba(206,199,236,1) 51%, rgba(206,199,236,1) 53%, rgba(193,191,234,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(235,233,249,1)), color-stop(45%, rgba(216,208,239,1)), color-stop(51%, rgba(206,199,236,1)), color-stop(53%, rgba(206,199,236,1)), color-stop(100%, rgba(193,191,234,1)));
+background: -webkit-linear-gradient(-45deg, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 45%, rgba(206,199,236,1) 51%, rgba(206,199,236,1) 53%, rgba(193,191,234,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 45%, rgba(206,199,236,1) 51%, rgba(206,199,236,1) 53%, rgba(193,191,234,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 45%, rgba(206,199,236,1) 51%, rgba(206,199,236,1) 53%, rgba(193,191,234,1) 100%);
+background: linear-gradient(135deg, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 45%, rgba(206,199,236,1) 51%, rgba(206,199,236,1) 53%, rgba(193,191,234,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#c1bfea', GradientType=1 );
+}
+
+nav{
+  background-color: #cec7ec;
+}
+
+.flip-box {
+  width: 300px;
+  height: 200px;
+  border: 1px transparent #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  position: fixed;
+
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25px;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: #ddc7ec;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: #ddc7ec;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+
+.under-box{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  width: 330px;
+  height: 230px;
+  background: rgb(114,106,227);
+background: radial-gradient(circle, rgba(114,106,227,0.55) 0%, rgba(214,137,127,0.7483368347338936) 45%, rgba(114,106,227,0.55) 100%);
+}
